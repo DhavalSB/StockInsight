@@ -1,0 +1,9 @@
+{
+  "MLModelCreatorDefinedKey" : {
+    "com.apple.createml.app.tag" : "78.5",
+    "com.apple.createml.version" : "12.0.0",
+    "com.apple.coreml.model.preview.type" : "tabularClassifier",
+    "com.apple.createml.app.version" : "3.0"
+  },
+  "MLModelAuthorKey" : "Dhaval Biradar"
+}

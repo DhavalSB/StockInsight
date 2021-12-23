@@ -3,14 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11D9A3E703C2E4EB5DADA70A /* Pods_Stocks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91378A17747D900D6261BD2F /* Pods_Stocks.framework */; };
 		7F7F89B326DC396C007100E1 /* StocksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7F89B226DC396C007100E1 /* StocksApp.swift */; };
 		7F7F89B526DC396C007100E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7F89B426DC396C007100E1 /* ContentView.swift */; };
 		7F7F89B726DC396E007100E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7F89B626DC396E007100E1 /* Assets.xcassets */; };
 		7F7F89BA26DC396E007100E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7F89B926DC396E007100E1 /* Preview Assets.xcassets */; };
+		7FBACFDB273CE4AD00E84E8D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBACFDA273CE4AD00E84E8D /* Model.swift */; };
+		7FBACFDD2766A5E500E84E8D /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBACFDC2766A5E400E84E8D /* Portfolio.swift */; };
+		7FC3D280276D8D8D00C44197 /* Test 2.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7FC3D27F276D8D8D00C44197 /* Test 2.mlpackage */; };
+		7FC3D282276D8DBF00C44197 /* MLTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC3D281276D8DBF00C44197 /* MLTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,13 @@
 		7F7F89B426DC396C007100E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F7F89B626DC396E007100E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F7F89B926DC396E007100E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7FBACFDA273CE4AD00E84E8D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		7FBACFDC2766A5E400E84E8D /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
+		7FC3D27F276D8D8D00C44197 /* Test 2.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "Test 2.mlpackage"; sourceTree = "<group>"; };
+		7FC3D281276D8DBF00C44197 /* MLTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLTest.swift; sourceTree = "<group>"; };
+		85BC6C4799121911FC707607 /* Pods-Stocks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stocks.release.xcconfig"; path = "Target Support Files/Pods-Stocks/Pods-Stocks.release.xcconfig"; sourceTree = "<group>"; };
+		91378A17747D900D6261BD2F /* Pods_Stocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE82C15A572136777A4F09B8 /* Pods-Stocks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stocks.debug.xcconfig"; path = "Target Support Files/Pods-Stocks/Pods-Stocks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +38,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D9A3E703C2E4EB5DADA70A /* Pods_Stocks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C2A4728F9C2C34CC2453D8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FE82C15A572136777A4F09B8 /* Pods-Stocks.debug.xcconfig */,
+				85BC6C4799121911FC707607 /* Pods-Stocks.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7F7F89A626DC396C007100E1 = {
 			isa = PBXGroup;
 			children = (
 				7F7F89B126DC396C007100E1 /* Stocks */,
 				7F7F89B026DC396C007100E1 /* Products */,
+				7C2A4728F9C2C34CC2453D8D /* Pods */,
+				C456D90B2BE4B457C970466B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +77,10 @@
 			children = (
 				7F7F89B226DC396C007100E1 /* StocksApp.swift */,
 				7F7F89B426DC396C007100E1 /* ContentView.swift */,
+				7FBACFDA273CE4AD00E84E8D /* Model.swift */,
+				7FBACFDC2766A5E400E84E8D /* Portfolio.swift */,
+				7FC3D27F276D8D8D00C44197 /* Test 2.mlpackage */,
+				7FC3D281276D8DBF00C44197 /* MLTest.swift */,
 				7F7F89B626DC396E007100E1 /* Assets.xcassets */,
 				7F7F89B826DC396E007100E1 /* Preview Content */,
 			);
@@ -67,6 +95,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		C456D90B2BE4B457C970466B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				91378A17747D900D6261BD2F /* Pods_Stocks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7F7F89BD26DC396E007100E1 /* Build configuration list for PBXNativeTarget "Stocks" */;
 			buildPhases = (
+				9FC3F2EDF9FF4ADCA5377902 /* [CP] Check Pods Manifest.lock */,
 				7F7F89AB26DC396C007100E1 /* Sources */,
 				7F7F89AC26DC396C007100E1 /* Frameworks */,
 				7F7F89AD26DC396C007100E1 /* Resources */,
+				BAE5A7BA9B49CF10E155C957 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -103,7 +141,7 @@
 				};
 			};
 			buildConfigurationList = 7F7F89AA26DC396C007100E1 /* Build configuration list for PBXProject "Stocks" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -132,11 +170,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9FC3F2EDF9FF4ADCA5377902 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stocks-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAE5A7BA9B49CF10E155C957 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stocks/Pods-Stocks-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stocks/Pods-Stocks-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stocks/Pods-Stocks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7F7F89AB26DC396C007100E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC3D282276D8DBF00C44197 /* MLTest.swift in Sources */,
+				7FBACFDD2766A5E500E84E8D /* Portfolio.swift in Sources */,
+				7FC3D280276D8D8D00C44197 /* Test 2.mlpackage in Sources */,
+				7FBACFDB273CE4AD00E84E8D /* Model.swift in Sources */,
 				7F7F89B526DC396C007100E1 /* ContentView.swift in Sources */,
 				7F7F89B326DC396C007100E1 /* StocksApp.swift in Sources */,
 			);
@@ -263,6 +347,7 @@
 		};
 		7F7F89BE26DC396E007100E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE82C15A572136777A4F09B8 /* Pods-Stocks.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -277,7 +362,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -293,6 +378,7 @@
 		};
 		7F7F89BF26DC396E007100E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85BC6C4799121911FC707607 /* Pods-Stocks.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -307,7 +393,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,21 @@
+{
+  "Outputs" : {
+    "isDiverseProbability" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "isDiverse" : {
+      "MLFeatureShortDescription" : ""
+    }
+  },
+  "Inputs" : {
+    "techPercent" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "etfPercent" : {
+      "MLFeatureShortDescription" : ""
+    }
+  },
+  "TrainingInputs" : {
+
+  }
+}
