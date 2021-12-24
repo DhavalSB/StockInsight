@@ -12,9 +12,13 @@
 		7F7F89B526DC396C007100E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7F89B426DC396C007100E1 /* ContentView.swift */; };
 		7F7F89B726DC396E007100E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7F89B626DC396E007100E1 /* Assets.xcassets */; };
 		7F7F89BA26DC396E007100E1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F7F89B926DC396E007100E1 /* Preview Assets.xcassets */; };
+		7F9F300B27764BAA00FB9641 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F300A27764BAA00FB9641 /* StartView.swift */; };
+		7F9F30112776596900FB9641 /* SVM Classifier 2.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F30102776596900FB9641 /* SVM Classifier 2.mlpackage */; };
+		7F9F301727765EE900FB9641 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 7F9F301627765EE900FB9641 /* SwiftUICharts */; };
+		7F9F301B277670B200FB9641 /* InsightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F301A277670B200FB9641 /* InsightView.swift */; };
+		7F9F301D277678B600FB9641 /* OptionsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F301C277678B600FB9641 /* OptionsTab.swift */; };
 		7FBACFDB273CE4AD00E84E8D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBACFDA273CE4AD00E84E8D /* Model.swift */; };
 		7FBACFDD2766A5E500E84E8D /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBACFDC2766A5E400E84E8D /* Portfolio.swift */; };
-		7FC3D280276D8D8D00C44197 /* Test 2.mlpackage in Sources */ = {isa = PBXBuildFile; fileRef = 7FC3D27F276D8D8D00C44197 /* Test 2.mlpackage */; };
 		7FC3D282276D8DBF00C44197 /* MLTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC3D281276D8DBF00C44197 /* MLTest.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,9 +28,12 @@
 		7F7F89B426DC396C007100E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7F7F89B626DC396E007100E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F7F89B926DC396E007100E1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7F9F300A27764BAA00FB9641 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		7F9F30102776596900FB9641 /* SVM Classifier 2.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "SVM Classifier 2.mlpackage"; sourceTree = "<group>"; };
+		7F9F301A277670B200FB9641 /* InsightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsightView.swift; sourceTree = "<group>"; };
+		7F9F301C277678B600FB9641 /* OptionsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTab.swift; sourceTree = "<group>"; };
 		7FBACFDA273CE4AD00E84E8D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		7FBACFDC2766A5E400E84E8D /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
-		7FC3D27F276D8D8D00C44197 /* Test 2.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "Test 2.mlpackage"; sourceTree = "<group>"; };
 		7FC3D281276D8DBF00C44197 /* MLTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLTest.swift; sourceTree = "<group>"; };
 		85BC6C4799121911FC707607 /* Pods-Stocks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stocks.release.xcconfig"; path = "Target Support Files/Pods-Stocks/Pods-Stocks.release.xcconfig"; sourceTree = "<group>"; };
 		91378A17747D900D6261BD2F /* Pods_Stocks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stocks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +46,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11D9A3E703C2E4EB5DADA70A /* Pods_Stocks.framework in Frameworks */,
+				7F9F301727765EE900FB9641 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,9 +85,12 @@
 			children = (
 				7F7F89B226DC396C007100E1 /* StocksApp.swift */,
 				7F7F89B426DC396C007100E1 /* ContentView.swift */,
+				7F9F301C277678B600FB9641 /* OptionsTab.swift */,
+				7F9F301A277670B200FB9641 /* InsightView.swift */,
+				7F9F300A27764BAA00FB9641 /* StartView.swift */,
 				7FBACFDA273CE4AD00E84E8D /* Model.swift */,
 				7FBACFDC2766A5E400E84E8D /* Portfolio.swift */,
-				7FC3D27F276D8D8D00C44197 /* Test 2.mlpackage */,
+				7F9F30102776596900FB9641 /* SVM Classifier 2.mlpackage */,
 				7FC3D281276D8DBF00C44197 /* MLTest.swift */,
 				7F7F89B626DC396E007100E1 /* Assets.xcassets */,
 				7F7F89B826DC396E007100E1 /* Preview Content */,
@@ -121,6 +132,9 @@
 			dependencies = (
 			);
 			name = Stocks;
+			packageProductDependencies = (
+				7F9F301627765EE900FB9641 /* SwiftUICharts */,
+			);
 			productName = Stocks;
 			productReference = 7F7F89AF26DC396C007100E1 /* Stocks.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +163,9 @@
 				Base,
 			);
 			mainGroup = 7F7F89A626DC396C007100E1;
+			packageReferences = (
+				7F9F301527765EE900FB9641 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 7F7F89B026DC396C007100E1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -217,12 +234,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F9F301B277670B200FB9641 /* InsightView.swift in Sources */,
 				7FC3D282276D8DBF00C44197 /* MLTest.swift in Sources */,
 				7FBACFDD2766A5E500E84E8D /* Portfolio.swift in Sources */,
-				7FC3D280276D8D8D00C44197 /* Test 2.mlpackage in Sources */,
 				7FBACFDB273CE4AD00E84E8D /* Model.swift in Sources */,
 				7F7F89B526DC396C007100E1 /* ContentView.swift in Sources */,
+				7F9F30112776596900FB9641 /* SVM Classifier 2.mlpackage in Sources */,
+				7F9F301D277678B600FB9641 /* OptionsTab.swift in Sources */,
 				7F7F89B326DC396C007100E1 /* StocksApp.swift in Sources */,
+				7F9F300B27764BAA00FB9641 /* StartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,6 +449,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7F9F301527765EE900FB9641 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = exactVersion;
+				version = "2.0.0-beta.2";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7F9F301627765EE900FB9641 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7F9F301527765EE900FB9641 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7F7F89A726DC396C007100E1 /* Project object */;
 }

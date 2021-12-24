@@ -1,0 +1,51 @@
+{
+  "Outputs" : {
+    "isDiverseProbability" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "isDiverse" : {
+      "MLFeatureShortDescription" : ""
+    }
+  },
+  "Inputs" : {
+    "Healthcare" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Financial Services" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Real Estate" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Technology" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Basic Materials" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Utilities" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Consumer Defensive" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Industrials" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Communication Services" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Consumer Cyclical" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Energy" : {
+      "MLFeatureShortDescription" : ""
+    },
+    "Exchange Traded Fund" : {
+      "MLFeatureShortDescription" : ""
+    }
+  },
+  "TrainingInputs" : {
+
+  }
+}

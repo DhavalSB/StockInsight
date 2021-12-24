@@ -10,26 +10,23 @@ import SwiftSoup
 import CoreML
 
 struct ContentView: View {
+    @AppStorage("setupIsComplete") private var setupIsComplete: Bool = true
     var body: some View {
-        Text("Hello World!")
-            .onAppear{
-//                print(printSector()) - works
-                model = {
-                    do {
-                        return try Test_2(configuration: MLModelConfiguration())
-                    }
-                    catch {
-                        print(error)
-                        fatalError()
-                    }
-                }()
-                do {
-                    print(try model.prediction(etfPercent: 0, techPercent: 100).isDiverseProbability)
-                }
-                catch {
-                    print("didn't work")
-                }
+        TabView {
+            InsightView()
+                .tabItem({
+                    Label("Home", systemImage: "house.fill")
+                })
+            
+            OptionsTab()
+            .tabItem{
+                Label("Options", systemImage: "gear")
             }
+                    
+        }
+        .onAppear {
+            print(userPortfolio)
+        }
     }
 }
 

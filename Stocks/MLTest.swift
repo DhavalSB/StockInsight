@@ -6,5 +6,15 @@
 //
 
 import Foundation
+import CoreML
+import CreateML
 
-var model: Test_2!
+let model: SVM_Classifier_2 = {
+    do {
+        let config = MLModelConfiguration()
+        return try SVM_Classifier_2(configuration: config)
+    } catch {
+        print(error)
+        fatalError("Couldn't create model")
+    }
+}()

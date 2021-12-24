@@ -1,24 +1,24 @@
 {
     "fileFormatVersion": "1.0.0",
     "itemInfoEntries": {
-        "105F006A-3509-409C-B792-4160ABAFCE78": {
+        "91A11BF6-2D99-4618-8D85-536D1EB1EDB5": {
             "author": "com.apple.CoreML",
             "description": "External FeatureDescription Overlay",
             "name": "FeatureDescriptions.json",
             "path": "com.apple.CoreML/FeatureDescriptions.json"
         },
-        "4167A8EF-C679-49BE-A878-679771E06427": {
+        "998945D3-FB47-4B88-B458-CFB691E4D276": {
             "author": "com.apple.CoreML",
             "description": "External Metadata Overlay",
             "name": "Metadata.json",
             "path": "com.apple.CoreML/Metadata.json"
         },
-        "53AFE615-5FB1-4AFC-8B3D-EC9E9538A1F2": {
+        "A826CA63-C852-4DC7-BDC8-549A2824D33F": {
             "author": "com.apple.CoreML",
             "description": "CoreML Model Specification",
-            "name": "Test 2.mlmodel",
-            "path": "com.apple.CoreML/Test 2.mlmodel"
+            "name": "SVM Classifier 2.mlmodel",
+            "path": "com.apple.CoreML/SVM Classifier 2.mlmodel"
         }
     },
-    "rootModelIdentifier": "53AFE615-5FB1-4AFC-8B3D-EC9E9538A1F2"
+    "rootModelIdentifier": "A826CA63-C852-4DC7-BDC8-549A2824D33F"
 }

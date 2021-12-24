@@ -7,7 +7,28 @@
 
 import Foundation
 import SwiftSoup
+import SwiftUI
+import Alamofire
+import Combine
 
+var userPortfolio: Portfolio = Portfolio(consumerCyclicalNum: 0, communicationServicesNum: 0, technologyNum: 0, consumerDefensiveNum: 0, healthcareNum: 0, financialServicesNum: 0, industrialsNum: 0, realEstateNum: 0, utilitiesNum: 0, basicMaterialsNum: 0, energyNum: 0, exchangeTradedFundNum: 0)
+
+let defaults = UserDefaults.standard
+
+extension View {
+    func hideKeyboard() {
+        let resign = #selector(UIResponder.resignFirstResponder)
+        UIApplication.shared.sendAction(resign, to: nil, from: nil, for: nil)
+    }
+}
+
+func checkStockValidity(stock: String) -> Bool {
+    if getSector(stock: stock) == "N/A" {
+        return false
+    } else {
+        return true
+    }
+}
 
 func isCS(stock: String) -> Bool {
     var returnVal: Bool = false
@@ -35,17 +56,19 @@ func isCS(stock: String) -> Bool {
 func getSector(stock: String) -> String {
     var sector = ""
 do {
-    let content = try String(contentsOf: URL(string: "https://finance.yahoo.com/quote/\(stock)/profile?p=\(stock)")!)
+    let originalURL = "https://finance.yahoo.com/quote/\(stock)/profile?p=\(stock)"
+    let replacedURL = originalURL.replacingOccurrences(of: " ", with: "")
+    let content = try String(contentsOf: URL(string: replacedURL)!)
     let doc: Document = try SwiftSoup.parse(content)
 //   Check if html tag is Sector
-    if try doc.select("span[data-reactid='19']")[0].text() == "Sector(s)" {
+    if try (try doc.select("span[data-reactid='19']").indices.contains(0)) && (try doc.select("span[data-reactid='19']")[0].text() == "Sector(s)") {
         let retrievedSector = try doc.select("span[data-reactid='21']")[0]
         sector = try retrievedSector.text()
-    } else if try doc.select("span[data-reactid='21']")[0].text() == "Sector(s)" {
+    } else if try (try doc.select("span[data-reactid='21']").indices.contains(0)) && (try doc.select("span[data-reactid='21']")[0].text() == "Sector(s)") {
          let retrievedSector = try doc.select("span[data-reactid='23']")[0]
         sector = try retrievedSector.text()
 // Check if html tag is Legal Type (For ETF's)
-    } else if (try doc.select("span[data-reactid='53']")[0].text() == "Legal Type"){
+    } else if try (try doc.select("span[data-reactid='53']").indices.contains(0)) && (try doc.select("span[data-reactid='53']")[0].text() == "Legal Type"){
         let type = try doc.select("span[data-reactid='54']")[0]
         sector = try type.text()
 //  If Neither, Just return N/A
@@ -98,3 +121,4 @@ func printSector() {
     }
     print(returnedSectors)
 }
+

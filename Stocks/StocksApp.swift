@@ -9,10 +9,16 @@ import SwiftUI
 
 @main
 struct StocksApp: App {
+    @AppStorage("setupIsComplete") private var setupIsComplete: Bool = false
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .preferredColorScheme(.light)
+            if !setupIsComplete {
+                StartView()
+                    .preferredColorScheme(.light)
+            } else {
+                ContentView()
+                    .preferredColorScheme(.light)
+            }
         }
     }
 }
