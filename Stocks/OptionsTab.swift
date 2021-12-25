@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct OptionsTab: View {
+    @EnvironmentObject var userPortfolio: Portfolio
     @AppStorage("setupIsComplete") private var setupIsComplete: Bool = true
     var body: some View {
         VStack {

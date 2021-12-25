@@ -10,22 +10,25 @@ import SwiftSoup
 import CoreML
 
 struct ContentView: View {
+    @EnvironmentObject var userPortfolio: Portfolio
     @AppStorage("setupIsComplete") private var setupIsComplete: Bool = true
     var body: some View {
         TabView {
             InsightView()
+                .environmentObject(userPortfolio)
                 .tabItem({
                     Label("Home", systemImage: "house.fill")
                 })
             
             OptionsTab()
+                .environmentObject(userPortfolio)
             .tabItem{
                 Label("Options", systemImage: "gear")
             }
                     
         }
         .onAppear {
-            print(userPortfolio)
+            print(userPortfolio.stocks)
         }
     }
 }

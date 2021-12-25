@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct StartView: View {
+    @EnvironmentObject var userPortfolio: Portfolio
     @State var name: String = ""
     @State var shares: String = ""
     @State var isValid: Bool = false
@@ -46,7 +47,6 @@ struct StartView: View {
                             hideKeyboard()
                             if isValid && ((Double(shares) ?? -1 > 0))  {
                                 userPortfolio.addStock(stock: name, number: Double(shares)!)
-                                print(userPortfolio)
                                 name = ""
                                 shares = ""
                                 isValid = false
@@ -70,12 +70,17 @@ struct StartView: View {
                             hideKeyboard()
                             if isValid && ((Double(shares) ?? -1 > 0))  {
                                 userPortfolio.addStock(stock: name, number: Double(shares)!)
-                                print(userPortfolio)
+                                name = ""
+                                shares = ""
                                 setupIsComplete = true
+                                userPortfolio.setPortfolioNums()
                             } else if userPortfolio.stocks.isEmpty{
                                 showingAlert = true
                             } else {
+                                name = ""
+                                shares = ""
                                 setupIsComplete = true
+                                userPortfolio.setPortfolioNums()
                             }
                         }) {
                             Text("Finish")
@@ -85,7 +90,7 @@ struct StartView: View {
                     }
                 }
             }
-            .navigationBarTitle("Intelligent Insight")
+            .navigationBarTitle("Welcome")
         }
     }
 }

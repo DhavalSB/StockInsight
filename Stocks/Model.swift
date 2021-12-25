@@ -11,7 +11,6 @@ import SwiftUI
 import Alamofire
 import Combine
 
-var userPortfolio: Portfolio = Portfolio(consumerCyclicalNum: 0, communicationServicesNum: 0, technologyNum: 0, consumerDefensiveNum: 0, healthcareNum: 0, financialServicesNum: 0, industrialsNum: 0, realEstateNum: 0, utilitiesNum: 0, basicMaterialsNum: 0, energyNum: 0, exchangeTradedFundNum: 0)
 
 let defaults = UserDefaults.standard
 

@@ -7,38 +7,38 @@
 
 import Foundation
 
-struct Portfolio {
+class Portfolio: ObservableObject {
     
     private let saveKey: String = "Portfolio"
     
-    var stocks: [String: Double] = [:]
+    @Published var stocks: [String: Double] = [:]
     
-    var consumerCyclicalNum: Double
-    var communicationServicesNum: Double
-    var technologyNum: Double
-    var consumerDefensiveNum: Double
-    var healthcareNum: Double
-    var financialServicesNum: Double
-    var industrialsNum: Double
-    var realEstateNum: Double
-    var utilitiesNum: Double
-    var basicMaterialsNum: Double
-    var energyNum: Double
-    var exchangeTradedFundNum: Double
+    @Published var consumerCyclicalNum: Double
+    @Published var communicationServicesNum: Double
+    @Published var technologyNum: Double
+    @Published var consumerDefensiveNum: Double
+    @Published var healthcareNum: Double
+    @Published var financialServicesNum: Double
+    @Published var industrialsNum: Double
+    @Published var realEstateNum: Double
+    @Published var utilitiesNum: Double
+    @Published var basicMaterialsNum: Double
+    @Published var energyNum: Double
+    @Published var exchangeTradedFundNum: Double
     
-    init(consumerCyclicalNum: Double, communicationServicesNum: Double, technologyNum: Double, consumerDefensiveNum: Double, healthcareNum: Double, financialServicesNum: Double, industrialsNum: Double, realEstateNum: Double, utilitiesNum: Double, basicMaterialsNum: Double, energyNum: Double, exchangeTradedFundNum: Double) {
-        self.consumerCyclicalNum = consumerCyclicalNum
-        self.communicationServicesNum = communicationServicesNum
-        self.technologyNum = technologyNum
-        self.consumerDefensiveNum = consumerDefensiveNum
-        self.healthcareNum = healthcareNum
-        self.financialServicesNum = financialServicesNum
-        self.industrialsNum = industrialsNum
-        self.realEstateNum = realEstateNum
-        self.utilitiesNum = utilitiesNum
-        self.basicMaterialsNum = basicMaterialsNum
-        self.energyNum = energyNum
-        self.exchangeTradedFundNum = exchangeTradedFundNum
+    init() {
+//        self.consumerCyclicalNum = consumerCyclicalNum
+//        self.communicationServicesNum = communicationServicesNum
+//        self.technologyNum = technologyNum
+//        self.consumerDefensiveNum = consumerDefensiveNum
+//        self.healthcareNum = healthcareNum
+//        self.financialServicesNum = financialServicesNum
+//        self.industrialsNum = industrialsNum
+//        self.realEstateNum = realEstateNum
+//        self.utilitiesNum = utilitiesNum
+//        self.basicMaterialsNum = basicMaterialsNum
+//        self.energyNum = energyNum
+//        self.exchangeTradedFundNum = exchangeTradedFundNum
         
         self.stocks = defaults.object(forKey: saveKey) as? [String:Double] ?? [:]
         self.consumerCyclicalNum = defaults.object(forKey: "cCyclical") as? Double ?? 0
@@ -66,7 +66,7 @@ struct Portfolio {
         stocks = values
     }
     
-    mutating func addStock(stock: String, number: Double) {
+     func addStock(stock: String, number: Double) {
         self.stocks[stock.uppercased()] = number
         save()
     }
@@ -90,7 +90,7 @@ struct Portfolio {
         defaults.set(exchangeTradedFundNum, forKey: "etf")
     }
     
-    mutating func setPortfolioNums() {
+     func setPortfolioNums() {
         self.resetSectorNums()
         for i in self.stocks.keys {
             let stockSector = getSector(stock: i)
@@ -120,6 +120,7 @@ struct Portfolio {
                 exchangeTradedFundNum += self.stocks[i] ?? 0
             }
         }
+         self.save()
     }
     
     func sectorPercentage(sector: Int) -> Double {
@@ -155,7 +156,7 @@ struct Portfolio {
         
     }
     
-    mutating func resetAll() {
+     func resetAll() {
         self.stocks = [:]
         self.consumerCyclicalNum = 0
         self.communicationServicesNum = 0
@@ -172,7 +173,7 @@ struct Portfolio {
         self.save()
     }
     
-    mutating func resetSectorNums() {
+     func resetSectorNums() {
         self.consumerCyclicalNum = 0
         self.communicationServicesNum = 0
         self.technologyNum = 0
