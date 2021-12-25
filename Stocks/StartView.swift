@@ -31,7 +31,7 @@ struct StartView: View {
                                 .foregroundColor(isValid ? .green : .red)
                         }
                     }
-                        TextField("# of shares held", text: $shares)
+                        TextField("$ amount of stock held", text: $shares)
                             .keyboardType(.decimalPad)
                             .submitLabel(.next)
                             .disableAutocorrection(true)
@@ -73,7 +73,6 @@ struct StartView: View {
                                 print(userPortfolio)
                                 setupIsComplete = true
                             } else if userPortfolio.stocks.isEmpty{
-                                //MARK: -Change View to show portfolio insight
                                 showingAlert = true
                             } else {
                                 setupIsComplete = true
