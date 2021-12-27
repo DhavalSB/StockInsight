@@ -189,5 +189,53 @@ class Portfolio: ObservableObject {
         self.save()
     }
     
+    func highestPercentStock() -> Double {
+        let total = (consumerCyclicalNum+communicationServicesNum+technologyNum+consumerDefensiveNum+healthcareNum+financialServicesNum+industrialsNum+realEstateNum+utilitiesNum+basicMaterialsNum+energyNum+exchangeTradedFundNum)
+        var highestVal: Double = 0
+        for stock in stocks.keys {
+            if stocks[stock]  ?? 0 > highestVal {
+                highestVal = stocks[stock] ?? 0
+            }
+        }
+        return highestVal/total
+    }
+    
+    func highestValStock() -> String {
+        var highestValStock: String = ""
+        var highestVal: Double = 0
+        for stock in stocks.keys {
+            if stocks[stock]  ?? 0 > highestVal {
+                highestValStock = stock
+                highestVal = stocks[stock] ?? 0
+            }
+        }
+        return highestValStock
+    }
+    
+    func highestPercentSector() -> Double {
+        let total = (consumerCyclicalNum+communicationServicesNum+technologyNum+consumerDefensiveNum+healthcareNum+financialServicesNum+industrialsNum+realEstateNum+utilitiesNum+basicMaterialsNum+energyNum+exchangeTradedFundNum)
+        var highestVal: Double = 0
+        for i in  [consumerCyclicalNum, communicationServicesNum, technologyNum, consumerDefensiveNum, healthcareNum, financialServicesNum, industrialsNum, realEstateNum, utilitiesNum, basicMaterialsNum, energyNum]{
+            if i > highestVal {
+                highestVal = i
+            }
+        }
+        return highestVal/total
+    }
+    
+    func highestValSector() -> String {
+        let sectorsNamesArray: [String] = ["Consumer Cyclical", "Communication Services", "Technology", "Consumer Defensive", "Healthcare", "Financial Services", "Industrials", "Real Estate", "Utilities", "Basic Materials", "Energy"]
+        let sectorsValArray: [Double] = [consumerCyclicalNum, communicationServicesNum, technologyNum, consumerDefensiveNum, healthcareNum, financialServicesNum, industrialsNum, realEstateNum, utilitiesNum, basicMaterialsNum, energyNum]
+        var highestVal: Double = 0
+        var highestValName: String = ""
+        for i in 0...10 {
+            if sectorsValArray[i] > highestVal {
+                highestVal = sectorsValArray[i]
+                highestValName = sectorsNamesArray[i]
+            }
+        }
+        return highestValName
+    }
+    
 }
 
