@@ -34,7 +34,14 @@ struct InsightView: View {
                 }
                 .padding()
                 Spacer()
-               PieChartView()
+                HStack {
+                    PieChartView(title: "Sectors", data: [userPortfolio.consumerCyclicalNum, userPortfolio.communicationServicesNum, userPortfolio.technologyNum, userPortfolio.consumerDefensiveNum, userPortfolio.healthcareNum, userPortfolio.financialServicesNum, userPortfolio.industrialsNum, userPortfolio.realEstateNum, userPortfolio.utilitiesNum, userPortfolio.basicMaterialsNum, userPortfolio.energyNum, userPortfolio.exchangeTradedFundNum], info1: "\(userPortfolio.highestValSector())—\(Int(userPortfolio.highestPercentSector()*100))%", info2: "")
+                        .padding()
+                    Spacer()
+                    Text("a;sdklfjkl;as")
+                }
+                Spacer()
+                Text("akl;sdjfkl;")
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -76,11 +83,11 @@ struct InsightInfoView: View {
             }
             .padding()
             if diverse == "diverse" {
-                Text("The ML model has classified your portfolio as \(Text("diverse").bold()). \"Diverse\" refers to your portfolio containing a good variety of different types of stocks. Having a diversified portfolio helps mitigate the risks involved with a specific asset class. \n A good way of diversifying your portfolio is investing in \(Text("index funds").bold()), which track a large number of stocks. \n \(userPortfolio.highestPercentStock() > 0.45 ? Text("\(userPortfolio.highestValStock()) makes up \(Int(userPortfolio.highestPercentStock())*100)% of your portfolio.").bold() + Text(" Consider rebalancing. \n") : Text(""))    To improve your portfolio further, make sure to \(Text("invest consistently.").bold()) Investing in the market regardless of current conditions allows for your money to be in the market longer, which produces better results than timing the market. Consider blindly investing some money into an index fund every month or so, and check in on it once in a while. \n    \(Text("Great work! Keep going.").bold())")
+                Text("The ML model has classified your portfolio as \(Text("diverse").bold()). \"Diverse\" refers to your portfolio containing a good variety of different types of stocks. Having a diversified portfolio helps mitigate the risks involved with a specific asset class. \n A good way of diversifying your portfolio is investing in \(Text("index funds").bold()), which track a large number of stocks. \n \(userPortfolio.highestPercentStock() > 0.45 ? Text("\(userPortfolio.highestValStock()) makes up \(Int(userPortfolio.highestPercentStock()*100))% of your portfolio.").bold() + Text(" Consider rebalancing. \n") : Text(""))    To improve your portfolio further, make sure to \(Text("invest consistently.").bold()) Investing in the market regardless of current conditions allows for your money to be in the market longer, which produces better results than timing the market. Consider blindly investing some money into an index fund every month or so, and check in on it once in a while. \n    \(Text("Great work! Keep going.").bold())")
                 .foregroundColor(.secondary)
                 .padding()
             } else {
-                Text("The ML model has classified your portfolio as \(Text("not diverse").bold()). \"Not diverse\" refers to your portfolio\'s concentration in few or one sector(s). Diversifying your portfolio helps mitigate the risks associated with a specific asset class. \n A good way to diversify your portfolio is to invest in \(Text("index funds").bold())—securities tracking a large number of other stocks. \n \(Text("Stocks in the \(userPortfolio.highestValSector()) sector make up \(Int(userPortfolio.highestPercentSector())*100)% of your portfolio.").bold()) Consider reducing the sector's prominence in your portfolio. \n    Once you've diversified, make sure to invest consistently. Investing in the stock market regularly is a great way to grow your wealth responsibly, and is safer than day trading or timing the market. \n \(Text("Try to adjust your portfolio.").bold())")
+                Text("The ML model has classified your portfolio as \(Text("not diverse").bold()). \"Not diverse\" refers to your portfolio\'s concentration in few or one sector(s). Diversifying your portfolio helps mitigate the risks associated with a specific asset class. \n A good way to diversify your portfolio is to invest in \(Text("index funds").bold())—securities tracking a large number of other stocks. \n \(Text("Stocks in the \(userPortfolio.highestValSector()) sector make up \(Int(userPortfolio.highestPercentSector()*100))% of your portfolio.").bold()) Consider reducing the sector's prominence in your portfolio. \n    Once you've diversified, make sure to invest consistently. Investing in the stock market regularly is a great way to grow your wealth responsibly, and is safer than day trading or timing the market. \n \(Text("Try to adjust your portfolio.").bold())")
                     .foregroundColor(.secondary)
                     .padding()
             }
