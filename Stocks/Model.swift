@@ -120,4 +120,3 @@ func printSector() {
     }
     print(returnedSectors)
 }
-

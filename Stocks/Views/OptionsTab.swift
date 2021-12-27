@@ -16,23 +16,24 @@ struct OptionsTab: View {
             Spacer()
             
             Button(action: {setupIsComplete=false}) {
-                    Text("Reset")
+                HStack {
+                    Image(systemName: "ellipsis.circle.fill")
+                    Text("Edit Portfolio")
+                }
             }
-            .padding()
+            .foregroundColor(.black)
+            .buttonStyle(PlainButtonStyle())
             
             Spacer()
-            
-            Button(action: {userPortfolio.setPortfolioNums()}) {
-                Text("Set Nums")
-            }
-            .padding()
-            
-            Spacer()
-            
+           
             Button(action: {userPortfolio.resetAll()}) {
-                Text("RESET ALL.")
+                HStack {
+                    Image(systemName: "exclamationmark.triangle.fill")
+                    Text("Reset All")
+                }
             }
-            .padding()
+            .foregroundColor(.black)
+            .buttonStyle(PlainButtonStyle())
             
             Spacer()
         }

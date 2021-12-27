@@ -90,7 +90,7 @@ struct StartView: View {
                     }
                 }
             }
-            .navigationBarTitle("Welcome")
+            .navigationBarTitle("Input your portfolio")
         }
     }
 }

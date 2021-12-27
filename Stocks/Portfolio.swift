@@ -156,6 +156,12 @@ class Portfolio: ObservableObject {
         
     }
     
+    func stockPercentage(stock: String) -> Double {
+        let total = (consumerCyclicalNum+communicationServicesNum+technologyNum+consumerDefensiveNum+healthcareNum+financialServicesNum+industrialsNum+realEstateNum+utilitiesNum+basicMaterialsNum+energyNum+exchangeTradedFundNum)
+        
+        return (self.stocks[stock] ?? 0) / total
+    }
+    
      func resetAll() {
         self.stocks = [:]
         self.consumerCyclicalNum = 0
@@ -236,6 +242,5 @@ class Portfolio: ObservableObject {
         }
         return highestValName
     }
-    
 }
 

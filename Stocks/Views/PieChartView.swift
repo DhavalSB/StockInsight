@@ -14,23 +14,36 @@ struct PieChartView: View {
     let info1: String
     let info2: String
     var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(.white)
+                .cornerRadius(20)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 20)
+                        .stroke(.black, lineWidth: 0.5)
+                )
             VStack {
                 Text(title)
+                    .padding()
                 HStack {
                     PieChart()
                         .data(data)
                         .chartStyle(ChartStyle(backgroundColor: .white, foregroundColor: [ColorGradient(.cyan), ColorGradient(.orange), ColorGradient(.mint), ColorGradient(.red), ColorGradient(.green)]))
+                        .frame(width: 150, height: 150)
+//                        .offset(y: -15)
                         .padding()
-                    VStack {
-                        Text(info1)
-                            .padding()
-                        Text(info2)
-                            .padding()
+//                    VStack {
+//                        Text(info1)
+//                            .padding()
+//                        Text(info2)
+//                            .padding()
+//                    }
                 }
             }
         }
+        .fixedSize()
+        .frame(height: 100)
     }
-
 }
 
 struct PieChartView_Previews: PreviewProvider {

@@ -15,6 +15,7 @@ struct InsightView: View {
     var body: some View {
     let isDiverse = try! model.prediction(Consumer_Cyclical: userPortfolio.sectorPercentage(sector: 1), Communication_Services: userPortfolio.sectorPercentage(sector: 2), Technology: userPortfolio.sectorPercentage(sector: 3), Consumer_Defensive: userPortfolio.sectorPercentage(sector: 4), Healthcare: userPortfolio.sectorPercentage(sector: 5), Financial_Services: userPortfolio.sectorPercentage(sector: 6), Industrials: userPortfolio.sectorPercentage(sector: 7), Real_Estate: userPortfolio.sectorPercentage(sector: 8), Utilities: userPortfolio.sectorPercentage(sector: 9), Basic_Materials: userPortfolio.sectorPercentage(sector: 10), Energy: userPortfolio.sectorPercentage(sector: 11), Exchange_Traded_Fund: userPortfolio.sectorPercentage(sector: 12)).isDiverse
         NavigationView {
+            ScrollView {
             VStack {
                 NavigationLink(destination: InsightInfoView(isDiverse: isDiverse).environmentObject(userPortfolio)) {
                 VStack {
@@ -33,15 +34,28 @@ struct InsightView: View {
                     }
                 }
                 .padding()
-                Spacer()
-                HStack {
-                    PieChartView(title: "Sectors", data: [userPortfolio.consumerCyclicalNum, userPortfolio.communicationServicesNum, userPortfolio.technologyNum, userPortfolio.consumerDefensiveNum, userPortfolio.healthcareNum, userPortfolio.financialServicesNum, userPortfolio.industrialsNum, userPortfolio.realEstateNum, userPortfolio.utilitiesNum, userPortfolio.basicMaterialsNum, userPortfolio.energyNum, userPortfolio.exchangeTradedFundNum], info1: "\(userPortfolio.highestValSector())—\(Int(userPortfolio.highestPercentSector()*100))%", info2: "")
-                        .padding()
-                    Spacer()
-                    Text("a;sdklfjkl;as")
+                NavigationLink(destination: {SectorDataView(title: "Sectors", isDiverse: Bool(isDiverse.lowercased()) ?? false, data: [userPortfolio.consumerCyclicalNum, userPortfolio.communicationServicesNum, userPortfolio.technologyNum, userPortfolio.consumerDefensiveNum, userPortfolio.healthcareNum, userPortfolio.financialServicesNum, userPortfolio.industrialsNum, userPortfolio.realEstateNum, userPortfolio.utilitiesNum, userPortfolio.basicMaterialsNum, userPortfolio.energyNum, userPortfolio.exchangeTradedFundNum])}) {
+                    HStack {
+                        Text("Sector Data")
+                            .foregroundColor(.black)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .padding()
+                            .foregroundColor(.black)
+                    }
                 }
-                Spacer()
-                Text("akl;sdjfkl;")
+                .padding()
+                NavigationLink(destination: {StockDataView(title: "Sectors", isDiverse: Bool(isDiverse.lowercased()) ?? false, data: Array(userPortfolio.stocks.values))}) {
+                    HStack {
+                        Text("Stock Data")
+                            .foregroundColor(.black)
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .padding()
+                            .foregroundColor(.black)
+                    }
+                }
+                .padding()
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -62,7 +76,7 @@ struct InsightView: View {
         })
     }
 }
-
+}
 
 struct InsightInfoView: View {
     @EnvironmentObject var userPortfolio: Portfolio
