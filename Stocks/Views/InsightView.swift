@@ -19,21 +19,22 @@ struct InsightView: View {
                 NavigationLink(destination: InsightInfoView(isDiverse: isDiverse).environmentObject(userPortfolio)) {
                 VStack {
                     HStack {
-                    VStack(alignment: .leading){
-                        Text("Your portfolio is \(Bool(isDiverse.lowercased()) ?? false ? Text("diverse.").bold() : Text("not diverse.").bold())")
+                        VStack(alignment: .leading){
+                            Text("Your portfolio is \(Bool(isDiverse.lowercased()) ?? false ? Text("diverse.").bold() : Text("not diverse.").bold())")
+                                .foregroundColor(.black)
+                            Text("Find out more.")
+                                .foregroundColor(.secondary)
+                        }
+                        Spacer()
+                        Image(systemName: "chevron.right")
                             .foregroundColor(.black)
-                        Text("Find out more.")
-                            .foregroundColor(.secondary)
-                    }
-                    Spacer()
-                    Image(systemName: "chevron.right")
-                        .foregroundColor(.black)
-                        .padding()
+                            .padding()
+                        }
                     }
                 }
-            }
-            .padding()
-                    Spacer()
+                .padding()
+                Spacer()
+               PieChartView()
             }
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {

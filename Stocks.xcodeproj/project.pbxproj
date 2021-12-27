@@ -17,6 +17,7 @@
 		7F9F301727765EE900FB9641 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 7F9F301627765EE900FB9641 /* SwiftUICharts */; };
 		7F9F301B277670B200FB9641 /* InsightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F301A277670B200FB9641 /* InsightView.swift */; };
 		7F9F301D277678B600FB9641 /* OptionsTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F301C277678B600FB9641 /* OptionsTab.swift */; };
+		7F9F30212779727500FB9641 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9F30202779727500FB9641 /* PieChartView.swift */; };
 		7FBACFDB273CE4AD00E84E8D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBACFDA273CE4AD00E84E8D /* Model.swift */; };
 		7FBACFDD2766A5E500E84E8D /* Portfolio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBACFDC2766A5E400E84E8D /* Portfolio.swift */; };
 		7FC3D282276D8DBF00C44197 /* MLTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC3D281276D8DBF00C44197 /* MLTest.swift */; };
@@ -32,6 +33,7 @@
 		7F9F30102776596900FB9641 /* SVM Classifier 2.mlpackage */ = {isa = PBXFileReference; lastKnownFileType = folder.mlpackage; path = "SVM Classifier 2.mlpackage"; sourceTree = "<group>"; };
 		7F9F301A277670B200FB9641 /* InsightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsightView.swift; sourceTree = "<group>"; };
 		7F9F301C277678B600FB9641 /* OptionsTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsTab.swift; sourceTree = "<group>"; };
+		7F9F30202779727500FB9641 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		7FBACFDA273CE4AD00E84E8D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		7FBACFDC2766A5E400E84E8D /* Portfolio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Portfolio.swift; sourceTree = "<group>"; };
 		7FC3D281276D8DBF00C44197 /* MLTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLTest.swift; sourceTree = "<group>"; };
@@ -84,14 +86,10 @@
 			isa = PBXGroup;
 			children = (
 				7F7F89B226DC396C007100E1 /* StocksApp.swift */,
-				7F7F89B426DC396C007100E1 /* ContentView.swift */,
-				7F9F301C277678B600FB9641 /* OptionsTab.swift */,
-				7F9F301A277670B200FB9641 /* InsightView.swift */,
-				7F9F300A27764BAA00FB9641 /* StartView.swift */,
 				7FBACFDA273CE4AD00E84E8D /* Model.swift */,
 				7FBACFDC2766A5E400E84E8D /* Portfolio.swift */,
-				7F9F30102776596900FB9641 /* SVM Classifier 2.mlpackage */,
-				7FC3D281276D8DBF00C44197 /* MLTest.swift */,
+				7F9F3023277972D300FB9641 /* ML */,
+				7F9F30222779729F00FB9641 /* Views */,
 				7F7F89B626DC396E007100E1 /* Assets.xcassets */,
 				7F7F89B826DC396E007100E1 /* Preview Content */,
 			);
@@ -104,6 +102,27 @@
 				7F7F89B926DC396E007100E1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7F9F30222779729F00FB9641 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7F9F30202779727500FB9641 /* PieChartView.swift */,
+				7F9F301A277670B200FB9641 /* InsightView.swift */,
+				7F9F301C277678B600FB9641 /* OptionsTab.swift */,
+				7F9F300A27764BAA00FB9641 /* StartView.swift */,
+				7F7F89B426DC396C007100E1 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7F9F3023277972D300FB9641 /* ML */ = {
+			isa = PBXGroup;
+			children = (
+				7F9F30102776596900FB9641 /* SVM Classifier 2.mlpackage */,
+				7FC3D281276D8DBF00C44197 /* MLTest.swift */,
+			);
+			path = ML;
 			sourceTree = "<group>";
 		};
 		C456D90B2BE4B457C970466B /* Frameworks */ = {
@@ -240,6 +259,7 @@
 				7FBACFDB273CE4AD00E84E8D /* Model.swift in Sources */,
 				7F7F89B526DC396C007100E1 /* ContentView.swift in Sources */,
 				7F9F30112776596900FB9641 /* SVM Classifier 2.mlpackage in Sources */,
+				7F9F30212779727500FB9641 /* PieChartView.swift in Sources */,
 				7F9F301D277678B600FB9641 /* OptionsTab.swift in Sources */,
 				7F7F89B326DC396C007100E1 /* StocksApp.swift in Sources */,
 				7F9F300B27764BAA00FB9641 /* StartView.swift in Sources */,
